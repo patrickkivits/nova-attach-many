@@ -26,10 +26,10 @@ class AttachController extends Controller
     public function getAvailableResources($request, $relationship)
     {
         if(strstr($relationship,'[')) {
-			$relationships = explode('[', $relationship);
-			$relationship = end($relationships);
-			$relationship = substr($relationship, 0, -1);
-		}
+            $relationships = explode('[', $relationship);
+            $relationship = end($relationships);
+            $relationship = substr($relationship, 0, -1);
+        }
         
         $resourceClass = $request->newResource();
 
